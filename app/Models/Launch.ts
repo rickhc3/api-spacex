@@ -1,5 +1,6 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
+import Rocket from './Rocket'
 
 export default class Launch extends BaseModel {
   @column({ isPrimary: true })
@@ -24,7 +25,7 @@ export default class Launch extends BaseModel {
   public youtube_link: string
 
   @column()
-  public rocket: string
+  public rocket_id: string
 
   @column()
   public links_patch_small: string | null
@@ -43,4 +44,9 @@ export default class Launch extends BaseModel {
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
+
+  @belongsTo(() => Rocket, {
+    foreignKey: 'rocket_id',
+  })
+  public rocket: BelongsTo<typeof Rocket>;
 }

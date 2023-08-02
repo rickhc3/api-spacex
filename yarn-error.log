@@ -1,0 +1,66 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python311\Scripts\;C:\Python311\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\tools\php81;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\dotnet\;C:\ProgramData\nvm;C:\Program Files\nodejs;C:\Program Files\Erlang OTP\bin;C:\Program Files (x86)\Elixir\bin;C:\Users\Rickh\.mix\escripts;C:\Program Files (x86)\Touch Portal\plugins\adb\platform-tools;;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Rickh\bin;C:\Users\Rickh\scoop\shims;C:\Users\Rickh\AppData\Local\Microsoft\WindowsApps;C:\Users\Rickh\AppData\Roaming\Composer\vendor\bin;C:\Users\Rickh\AppData\Roaming\npm;C:\Users\Rickh\.fly\bin;C:\Users\Rickh\AppData\Local\Programs\oh-my-posh\bin;C:\Users\Rickh\AppData\Local\spicetify;C:\Users\Rickh\Desktop\node-v20.2.0-win-x64\node;C:\Users\Rickh\Desktop\node-v20.2.0-win-x64\node;C:\Users\Rickh\Desktop\nps\node;C:\Users\Rickh\AppData\Local\gitkraken\bin;E:\Aplicativos\php_bin\php81;C:\Users\Rickh\.dotnet\tools
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\Rickh\Desktop\coodesh-fullstack-challenge\api\package.json: Unexpected token } in JSON at position 932
+      at JSON.parse (<anonymous>)
+      at C:\ProgramData\nvm\v16.18.1\node_modules\yarn\lib\cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (C:\ProgramData\nvm\v16.18.1\node_modules\yarn\lib\cli.js:310:30)
+      at C:\ProgramData\nvm\v16.18.1\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "api",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "node ace serve --watch",
+      "build": "node ace build --production",
+      "start": "node server.js",
+      "test": "node ace test"
+    },
+    "devDependencies": {
+      "@adonisjs/assembler": "^5.9.5",
+      "@japa/preset-adonis": "^1.2.0",
+      "@japa/runner": "^2.5.1",
+      "@types/proxy-addr": "^2.0.0",
+      "@types/source-map-support": "^0.5.6",
+      "adonis-preset-ts": "^2.1.0",
+      "pino-pretty": "^10.2.0",
+      "typescript": "~4.6",
+      "youch": "^3.2.3",
+      "youch-terminal": "^2.2.2"
+    },
+    "dependencies": {
+      "@adonisjs/core": "^5.8.0",
+      "@adonisjs/lucid": "^18.4.0",
+      "@adonisjs/repl": "^3.1.0",
+      "adonis5-scheduler": "^2.0.2",
+      "adonis5-swagger": "^1.4.1",
+      "axios": "^1.4.0",
+      "luxon": "^3.3.0",
+      "mysql2": "^3.5.2",
+      "proxy-addr": "^2.0.7",
+      "reflect-metadata": "^0.1.13",
+      "source-map-support": "^0.5.21",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

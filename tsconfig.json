@@ -23,13 +23,21 @@
       ],
       "Database/*": [
         "./database/*"
+      ],
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
       ]
     },
     "types": [
       "@adonisjs/core",
       "@adonisjs/repl",
       "@japa/preset-adonis/build/adonis-typings",
-      "@adonisjs/lucid"
+      "@adonisjs/lucid",
+      "adonis5-swagger",
+      "adonis5-scheduler"
     ]
   }
 }

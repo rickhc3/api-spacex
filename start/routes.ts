@@ -25,3 +25,4 @@ Route.get('/', async () => {
 })
 
 Route.get('/launches', 'LaunchController.index')
+Route.get('/launches/stats', 'LaunchController.stats');

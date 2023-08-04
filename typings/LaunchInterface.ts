@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-
+import { IRocket } from "@/typings/RocketDataInterface";
 export interface ILaunch {
   id: number;
   flight_number: number;
@@ -15,4 +15,5 @@ export interface ILaunch {
   wikipedia: string | null;
   created_at: DateTime;
   updated_at: DateTime;
+  rocket: IRocket;
 }

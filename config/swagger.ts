@@ -1,4 +1,8 @@
 import { SwaggerConfig } from '@ioc:Adonis/Addons/Swagger';
+import { LaunchsResponse } from './schemas/LaunchsResponse';
+import { LaunchItem } from './schemas/LaunchItem';
+import { StatsResponse } from './schemas/StatsResponse';
+import { RocketItem } from './schemas/RocketItem';
 
 export default {
   uiEnabled: true,
@@ -11,167 +15,16 @@ export default {
       openapi: '3.0.0',
       components: {
         schemas: {
-          LaunchsResponse: {
-            type: 'object',
-            properties: {
-              results: {
-                type: 'array',
-                items: {
-                  $ref: '#/components/schemas/LaunchItem',
-                },
-              },
-              totalDocs: {
-                type: 'integer',
-              },
-              page: {
-                type: 'integer',
-              },
-              totalPages: {
-                type: 'integer',
-              },
-              hasNext: {
-                type: 'boolean',
-              },
-              hasPrev: {
-                type: 'boolean',
-              },
-            },
-          },
-          LaunchItem: {
-            type: 'object',
-            properties: {
-              id: {
-                type: 'integer',
-              },
-              flight_number: {
-                type: 'integer',
-              },
-              name: {
-                type: 'string',
-              },
-              date_utc: {
-                type: 'string',
-                format: 'date-time',
-              },
-              success: {
-                type: 'boolean',
-              },
-              reused: {
-                type: 'boolean',
-              },
-              youtube_link: {
-                type: 'string',
-              },
-              rocket_id: {
-                type: 'integer',
-              },
-              links_patch_small: {
-                type: 'string',
-              },
-              links_patch_large: {
-                type: 'string',
-              },
-              presskit: {
-                type: 'string',
-              },
-              wikipedia: {
-                type: 'string',
-              },
-              created_at: {
-                type: 'string',
-                format: 'date-time',
-              },
-              updated_at: {
-                type: 'string',
-                format: 'date-time',
-              },
-              rocket: {
-                $ref: '#/components/schemas/RocketItem',
-              }
-            },
-          },
-          StatsResponse: {
-            type: 'object',
-            properties: {
-              launchesByYear: {
-                type: 'array',
-                items: {
-                  type: 'object',
-                  properties: {
-                    year: {
-                      type: 'integer',
-                    },
-                    count: {
-                      type: 'integer',
-                    },
-                  },
-                },
-              },
-              launchesByRocket: {
-                type: 'array',
-                items: {
-                  type: 'object',
-                  properties: {
-                    rocketName: {
-                      type: 'string',
-                    },
-                    condition: {
-                      type: 'string',
-                    },
-                    count: {
-                      type: 'integer',
-                    },
-                  },
-                },
-              },
-              reusedCount: {
-                type: 'integer',
-              },
-              newCount: {
-                type: 'integer',
-              },
-              conditionUnknownCount: {
-                type: 'integer',
-              },
-              successCount: {
-                type: 'integer',
-              },
-              failureCount: {
-                type: 'integer',
-              },
-              statusUnknownCount: {
-                type: 'integer',
-              },
-            },
-          },
-          RocketItem: {
-            type: 'object',
-            properties: {
-              id: {
-                type: 'integer',
-              },
-              name: {
-                type: 'string',
-              },
-              rocket_id: {
-                type: 'string',
-              },
-              created_at: {
-                type: 'string',
-                format: 'date-time',
-              },
-              updated_at: {
-                type: 'string',
-                format: 'date-time',
-              },
-            },
-          },
+          LaunchsResponse,
+          LaunchItem,
+          StatsResponse,
+          RocketItem,
         },
   },
   info: {
     title: 'Gerenciamento de Lançamentos de Foguetes SpaceX',
     version: '1.0.0',
-    description: 'Este componente gerencia os lançamentos de foguetes relacionados à SpaceX, fornecendo endpoints para listar lançamentos e obter estatísticas sobre eles.',
+    description: 'API para listar os lançamentos de foguetes relacionados da SpaceX, fornecendo endpoints para listar lançamentos e obter estatísticas sobre eles.',
   },
 },
 apis: [

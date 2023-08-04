@@ -34,7 +34,7 @@ export default class SaveLaunches extends BaseCommand {
 
   public async run() {
     try {
-      const response = await Axios.get('https://api.spacexdata.com/v4/launches');
+      const response = await Axios.get('https://api.spacexdata.com/v5/launches');
       const data = response.data;
 
       for (const launchData of data) {
